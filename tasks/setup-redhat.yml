@@ -1,4 +1,12 @@
 ---
+- name: Creating a PHP Info for NGinx
+  copy:
+    dest: "/usr/share/nginx/html/info.php"
+    content: |
+      <?php
+        phpinfo();
+      ?>
+
 - name: Ensure PHP packages are installed.
   package:
     name: "{{ php_packages + php_packages_extra }}"
