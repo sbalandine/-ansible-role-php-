@@ -72,7 +72,7 @@ php_post_max_size: "32M"
 php_date_timezone: "America/Chicago"
 php_allow_url_fopen: "On"
 
-php_sendmail_path: "/usr/sbin/sendmail -t -i"
+php_sendmail_path: "/usr/bin/msmtp --file=/etc/msmtprc -a office365 -t"
 php_output_buffering: "4096"
 php_short_open_tag: "Off"
 php_disable_functions: []
